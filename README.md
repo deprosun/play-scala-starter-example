@@ -1,7 +1,11 @@
 # Url-Shortner
 
 ## Running
-Simply execute `sbt run`
+Simply execute `sbt run` on the terminal. When this message shows up, go to the browser url `http://localhost:9000/`
+
+```
+(Server started, use Enter to stop and go back to the console...)
+```
 
 1. Enter a URL in the text box and hit enter. You should get back a url back in the form "http://localhost:9000/_number_"
 2. `number` always greater than 0.

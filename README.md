@@ -1,57 +1,36 @@
-# play-scala-starter-example
-
-[<img src="https://img.shields.io/travis/playframework/play-scala-starter-example.svg"/>](https://travis-ci.org/playframework/play-scala-starter-example)
-
-This is a starter application that shows how Play works.  Please see the documentation at <https://www.playframework.com/documentation/latest/Home> for more details.
+# Url-Shortner
 
 ## Running
+Simply execute `sbt run`
 
-Run this using [sbt](http://www.scala-sbt.org/).  If you downloaded this project from <http://www.playframework.com/download> then you'll find a prepackaged version of sbt in the project directory:
+1. Enter a URL in the text box and hit enter. You should get back a url back in the form "http://localhost:9000/_number_"
+2. `number` always greater than 0.
+3. Enter a different url, and you should observe a new url sent back with the "next" `number`.
+4. You can copy and paste this URL back into the browser and it will take you to the original url you enter in the textbox.
+5. If you enter a url that has already been entered, you will get back the same url as mentioned in 1.
+6. If you click the "Url-Shortner" text on the header page, you will get directed to a home page where only text box shows.
+7. If you added spaces only, upon enter-key the website gets directed to /
+8. It is assumed that the code is being run on port 9000. If you choose to change the port, then the application will no
 
-```bash
-sbt run
-```
+## How does the application save data
 
-And then go to <http://localhost:9000> to see the running web application.
+1. A file called "urls.txt" is made when you run the application.
+2. This is the file that new urls get appeneded to.
+3. If you want to get a new set of the db, just delete the file from the project root directory
 
-There are several demonstration files available in this template.
+## What did I find Challenging/Learn?
 
-## Controllers
+1.  Making a website using Play Framework!
+2.  Sending Form to the template
+3.  Play Documentation is pretty well written.
+4.  Play Starter code is soo helpful
+5.  For someone who hasn't written a front end code ( and that too using a completely new framework), I think did a good job :)
 
-- HomeController.scala:
+## Improvements to be made
 
-  Shows how to handle simple HTTP requests.
-
-- AsyncController.scala:
-
-  Shows how to do asynchronous programming when handling a request.
-
-- CountController.scala:
-
-  Shows how to inject a component into a controller and use the component when
-  handling requests.
-
-## Components
-
-- Module.scala:
-
-  Shows how to use Guice to bind all the components needed by your application.
-
-- Counter.scala:
-
-  An example of a component that contains state, in this case a simple counter.
-
-- ApplicationTimer.scala:
-
-  An example of a component that starts when the application starts and stops
-  when the application stops.
-
-## Filters
-
-- Filters.scala:
-
-  Creates the list of HTTP filters used by your application.
-
-- ExampleFilter.scala
-
-  A simple filter that adds a header to every response.
+1. Use a actual Database. Or something else besides a text file..
+2. Check if the url entered is of a valid URL regex form
+3. I'd like to study my code and see if I could make this even a "thinner" code base. Refactor/Reuse the templates. I feel I can reuse `index.scala.html` instead of creating `indexshow.scala.html`. Same with `urlshortner.scala.html` and `urlshortnershow.scala.html` templates.
+4. Learn how to unit test controllers.
+5. Learn more about the Play Framework 
+6. Learn more about routing!

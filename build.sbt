@@ -1,4 +1,4 @@
-name := """play-scala-starter-example"""
+name := """url-shortner"""
 
 version := "1.0-SNAPSHOT"
 

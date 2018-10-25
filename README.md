@@ -1,7 +1,7 @@
 # Url-Shortner
 
 ## Running
-Simply execute `sbt run` on the terminal. When this message shows up, go to the browser url `http://localhost:9000/`
+You need to make sure you have `sbt` cli installed. You can download it from here [https://www.scala-sbt.org/download.html]. Simply execute `sbt run` on the terminal. When this message shows up, go to the browser url `http://localhost:9000/`
 
 ```
 (Server started, use Enter to stop and go back to the console...)
